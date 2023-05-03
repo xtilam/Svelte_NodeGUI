@@ -1,0 +1,49 @@
+{
+  "description": "Svelte NodeGUI playground for feature development",
+  "version": "1.0.0",
+  "author": "Jamie Birch",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "bundle": "webpack --mode production",
+    "bundle-dev": "webpack --mode=development",
+    "dev": "qode ./dev/dev.js",
+    "dev-debug": "qode --inspect ./dev/dev.js",
+    "start": "node livereload.js node_modules/.bin/qode ./dist/index.js",
+    "debug": "qode --inspect ./dist/index.js",
+    "build": "node ./dev/build.js"
+  },
+  "dependencies": {
+    "@nodegui/nodegui": "^0.59.2",
+    "phin": "^3.5.1"
+  },
+  "devDependencies": {
+    "@nodegui/packer": "^1.5.0",
+    "@nodegui/svelte-nodegui-preprocessor": "*",
+    "@tsconfig/svelte": "^4.0.1",
+    "@types/node": "^14.14.37",
+    "bytenode": "^1.4.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "fork-ts-checker-webpack-plugin": "^8.0.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "minify": "^9.2.0",
+    "native-addon-loader": "^2.0.1",
+    "nodemon": "^2.0.22",
+    "sass": "^1.62.1",
+    "svelte": "^3.17.1",
+    "svelte-check": "^3.2.0",
+    "svelte-loader": "^3.1.7",
+    "svelte-preprocess": "^5.0.3",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
